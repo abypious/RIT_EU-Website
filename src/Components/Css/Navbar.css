@@ -1,69 +1,112 @@
+.navbar-scroll {
+  background-color: #0099008b;
+  box-shadow: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%; 
+  height: 80px; 
+}
+
+.navbar-scroll .nav-link {
+  color: #fff;
+  transition: color 0.3s ease;
+  font-size: 18px;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-family: 'Ubuntu', sans-serif; 
+  text-transform: uppercase; 
+}
+
+.navbar {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  width: 100%; 
+  height: 6rem; 
+}
+
+.navbar .container-fluid {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  width: 100%; 
+  padding: 0; 
+}
+
+.navbar-brand {
+  position: absolute; 
+  left: 15px; 
+  height: 100%; 
+  display: flex; 
+  align-items: center; 
+}
+
+.navbar-nav {
+  display: flex;
+  flex-grow: 1; 
+  justify-content: center; 
+}
+
+.navbar-scrolled {
+  background-color: #04aa0c;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+.navbar-scrolled .nav-link {
+  color: #4f4f4f;
+}
+
+.nav-link {
+  margin-right: 15px;
+  font-weight: bolder;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: #ff1500;
+  font-size: larger;
+}
+
+.navbar-brand img {
+  max-height: 60px; 
+}
+
 @media (max-width: 991px) {
-    .navbar-scroll {
-      background-color: #fff;
-    }
-       
-    .navbar-scroll .navbar-brand,
-    .navbar-scroll .nav-link,
-    .navbar-scroll .fa-bars {
-      color: #4f4f4f !important;
-    }         
-  }
-  
-  .navbar-brand {
-    letter-spacing: 3px;
-    font-size: 2rem;
-    font-weight: 500;
-  }
-  .navbar-scroll .navbar-brand,
-  .navbar-scroll .nav-link,
-  .navbar-scroll .fa-bars {
-    color: #fff;
-  }
-  
   .navbar-scroll {
-    box-shadow: none;
-  }
-  
-  .navbar-scrolled {
-    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
-  }
-  
-  .navbar-scrolled .navbar-brand,
-  .navbar-scrolled .nav-link,
-  .navbar-scrolled .fa-bars {
-    color: #4f4f4f;
-  }
-  
-  .navbar-scrolled {
     background-color: #fff;
   }
-  
-  @media (max-width: 450px) {
-    #intro {
-      height: 950px !important;
-    }
+
+  .navbar-scroll .nav-link {
+    color: #4f4f4f !important;
   }
-  
-  @media (min-width: 550px) and (max-width: 750px) {
-    #intro {
-      height: 1100px !important;
-    }
-  }
-  
-  @media (min-width: 800px) and (max-width: 990px) {
-    #intro {
-      height: 600px !important;
-    }
-  }
-  
+}
+
+.bg-image {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.display-1 {
+  font-weight: 500 !important;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1600px) {
   .display-1 {
-    font-weight: 500 !important;
-    letter-spacing: 40px;
+    font-size: 7rem;
   }
-  
-  @media (min-width: 1600px) {
-    .display-1 {
-      font-size: 10rem;
-    }
-  }
+}
+
+.container-fluid {
+  padding-left: 0; 
+  padding-right: 0; 
+}
