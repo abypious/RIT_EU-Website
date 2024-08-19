@@ -70,7 +70,7 @@ function Navbar() {
             <div className="container d-flex justify-content-center align-items-center h-100">
               <div className="row align-items-center">
                 <div className="col-12">
-                  <h1 className="mb-0 text-white display-1">Studio</h1>
+                  <h1 className="mb-0 text-white display-1">RIT EU</h1>
                 </div>
               </div>
             </div>
