@@ -1,9 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Css/Navbar.css';
-import Logo from '../Assets/Logo.png'; // Update path if necessary
+import Logo from '../Assets/Logo.png';
 
 function Navbar() {
+  const [isMobile, setIsMobile] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       const navbar = document.querySelector('.navbar');
@@ -20,6 +23,27 @@ function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 991) {
+        setIsMobile(false);
+        setIsMenuOpen(false);
+      } else {
+        setIsMobile(true);
+      }
+    };
+
+    handleResize(); // Call on component mount
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup on component unmount
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const toggleMobileMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg fixed-top navbar-scroll">
@@ -27,56 +51,28 @@ function Navbar() {
           <NavLink className="navbar-brand" to="/">
             <img src={Logo} alt="Logo" />
           </NavLink>
-          <div className="navbar-nav">
-            <NavLink
-              className="nav-link"
-              exact
-              activeClassName="active"
-              to="/"
-            >
+          {isMobile && (
+            <button className="mobile-menu-icon" onClick={toggleMobileMenu}>
+              <span className="hamburger-icon">&#9776;</span>
+            </button>
+          )}
+          <div className={`navbar-nav ${isMobile && isMenuOpen ? 'mobile-menu-active' : ''}`}>
+            <NavLink className="nav-link" exact activeClassName="active" to="/" onClick={toggleMobileMenu}>
               Home
             </NavLink>
-            <NavLink
-              className="nav-link"
-              activeClassName="active"
-              to="/about"
-            >
+            <NavLink className="nav-link" activeClassName="active" to="/about" onClick={toggleMobileMenu}>
               About
             </NavLink>
-            <NavLink
-              className="nav-link"
-              activeClassName="active"
-              to="/blogs"
-            >
+            <NavLink className="nav-link" activeClassName="active" to="/blogs" onClick={toggleMobileMenu}>
               Blogs
             </NavLink>
-            <NavLink
-              className="nav-link"
-              activeClassName="active"
-              to="/contact"
-            >
+            <NavLink className="nav-link" activeClassName="active" to="/contact" onClick={toggleMobileMenu}>
               Contact
             </NavLink>
           </div>
+          {!isMobile && <button className="learn-more-btn">Learn More</button>}
         </div>
       </nav>
-
-      <section>
-        <div id="intro" className="bg-image" style={{
-            backgroundImage: "url('https://mdbootstrap.com/img/Photos/new-templates/craftsman/img(1).jpg')",
-            height: '100vh'
-          }}>
-          <div className="mask" style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
-            <div className="container d-flex justify-content-center align-items-center h-100">
-              <div className="row align-items-center">
-                <div className="col-12">
-                  <h1 className="mb-0 text-white display-1">RIT EU</h1>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

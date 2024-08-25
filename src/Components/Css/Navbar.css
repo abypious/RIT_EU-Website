@@ -1,9 +1,10 @@
+/* Common styles */
 .navbar-scroll {
   background-color: #0099008b;
   box-shadow: none;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  width: 100%; 
-  height: 80px; 
+  width: 100%;
+  height: 80px;
 }
 
 .navbar-scroll .nav-link {
@@ -12,38 +13,38 @@
   font-size: 18px;
   padding: 0.5rem 1rem;
   text-decoration: none;
-  font-family: 'Ubuntu', sans-serif; 
-  text-transform: uppercase; 
+  font-family: 'Ubuntu', sans-serif;
+  text-transform: uppercase;
 }
 
 .navbar {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
-  width: 100%; 
-  height: 6rem; 
+  width: 100%;
+  height: 6rem;
+  position: relative; 
 }
 
 .navbar .container-fluid {
   display: flex;
-  justify-content: center; 
+  justify-content: space-between;
   align-items: center;
-  width: 100%; 
-  padding: 0; 
+  width: 100%;
+  padding: 0 20px;
 }
 
 .navbar-brand {
-  position: absolute; 
-  left: 15px; 
-  height: 100%; 
-  display: flex; 
-  align-items: center; 
+  left: 15px;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .navbar-nav {
   display: flex;
-  flex-grow: 1; 
-  justify-content: center; 
+  flex-grow: 1;
+  justify-content: center;
 }
 
 .navbar-scrolled {
@@ -67,46 +68,84 @@
 }
 
 .navbar-brand img {
-  max-height: 60px; 
+  max-height: 60px;
+}
+
+/* Learn More Button */
+.learn-more-btn {
+  background-color: #6a00ff;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Ubuntu', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.learn-more-btn:hover {
+  background-color: #ffffff;
+  color: #6a00ff;
+}
+
+/* Mobile menu styles */
+.mobile-menu-icon {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+}
+
+.hamburger-icon {
+  font-size: 30px;
+  color: #fff;
 }
 
 @media (max-width: 991px) {
-  .navbar-scroll {
-    background-color: #fff;
+  .navbar .container-fluid {
+    /* Keep the logo alignment unchanged */
+    justify-content: space-between;
   }
 
-  .navbar-scroll .nav-link {
-    color: #4f4f4f !important;
+  .mobile-menu-icon {
+    display: block;
   }
-}
 
-.bg-image {
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-
-.mask {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.display-1 {
-  font-weight: 500 !important;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-@media (min-width: 1600px) {
-  .display-1 {
-    font-size: 7rem;
+  .navbar-nav {
+    position: absolute;
+    top: 12%;
+    right: 0; /* Align dropdown to the right */
+    width: 100%;
+    background-color: #0099008b;
+    flex-direction: column;
+    align-items: flex-end; /* Align items to the right */
+    justify-content: flex-start;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
   }
-}
 
-.container-fluid {
-  padding-left: 0; 
-  padding-right: 0; 
+  .mobile-menu-active {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: right; /* Align text to the right */
+    padding: 1rem 0;
+    font-size: 18px;
+  }
+
+  .learn-more-btn {
+    display: none;
+  }
 }

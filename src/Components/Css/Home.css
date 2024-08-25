@@ -1,6 +1,178 @@
-.divStyle {
-    background-color: lightblue;
-    padding: 20px;
-    text-align: center;
+/* Home Container */
+.home-container {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+  background-image: url('../../Assets/hero_bg.jpg'); /* Path to your background image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* For positioning text over background */
+  overflow: hidden; /* Prevent overflow issues */
+  z-index: 1; /* Ensure it's not above the navbar */
+}
+
+/* Hero Title */
+.hero-title {
+  color: #fff;
+  font-size: 4rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Optional: Add shadow to make text more readable */
+  text-align: center;
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+.hero-section:hover .hero-title {
+  color: #ffcc00; /* Change text color on hover */
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.9); /* Enhanced shadow on hover */
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Navbar */
+.navbar {
+  position: relative; 
+  z-index: 1000; 
+}
+
+
+/* Content Section */
+.content {
+  padding: 40px 20px;
+  background-color: #c8cacc; /* Optional: Adds a background color to the content section */
+  text-align: center;
+}
+
+/* About Section */
+.about-section {
+  padding: 20px; /* Add padding to the section */
+  max-width: 1000px; /* Ensure it does not stretch too wide */
+  margin: 0 auto; /* Center the section horizontally */
+  background: rgba(255, 255, 255, 0.9); /* Light background with slight transparency */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #04aa0c; /* Accent color */
+  font-family: 'Ubuntu', sans-serif;
+  display: inline-block;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #04aa0c; /* Underline effect */
+  transition: border-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.about-section h2:hover {
+  border-color: #04aa0c; /* Darker shade on hover */
+}
+
+.about-section p {
+  font-size: 1.2rem;
+  color: #4f4f4f; /* Neutral dark grey for readability */
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 800px; /* Ensure text does not stretch too wide */
+  padding: 0 20px; /* Add horizontal padding */
+}
+
+/* Mission and Vision Sections */
+.mission-vision {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  gap: 20px;
+  flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+/* Mission and Vision Cards */
+.mission, .vision {
+  flex: 1;
+  margin: 10px;
+  background-color: #04aa0c; /* Accent color */
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff; /* White text for contrast */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.mission:hover, .vision:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Mission and Vision Headings */
+.mission h3, .vision h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #ffffff; /* White color for headings */
+  font-family: 'Ubuntu', sans-serif;
+  text-transform: uppercase;
+}
+
+/* Mission and Vision Paragraphs */
+.mission p, .vision p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #ffffff; /* White text for contrast */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: block; /* Show toggle button on mobile */
   }
-  
+
+  .hero-title {
+    font-size: 2.5rem; /* Adjust title size for smaller screens */
+  }
+
+  .about-section h2 {
+    font-size: 1.5rem; /* Adjust heading size for smaller screens */
+  }
+
+  .about-section p {
+    font-size: 1rem; /* Adjust paragraph size for smaller screens */
+  }
+
+  .mission-vision {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center align cards */
+  }
+
+  .mission, .vision {
+    max-width: 90%; 
+    margin: 10px 0; 
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.8rem; 
+  }
+
+  .about-section h2 {
+    font-size: 1.2rem; 
+  }
+
+  .about-section p {
+    font-size: 0.9rem; 
+  }
+
+  .mission, .vision {
+    padding: 15px; 
+  }
+
+  .mission h3, .vision h3 {
+    font-size: 1.5rem; 
+  }
+
+  .mission p, .vision p {
+    font-size: 1rem; 
+  }
+}
