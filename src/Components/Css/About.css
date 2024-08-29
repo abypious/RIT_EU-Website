@@ -1,91 +1,86 @@
 /* Home Container */
 .home-container {
-    width: 100%;
-  }
-  
-  /* Hero Section */
-  .hero-section {
-    background-image: url('../../Assets/hero_bg.jpg'); /* Path to your background image */
-    background-size: cover;
-    background-position: center;
-    height: 70vh; /* Adjust the height as needed */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative; /* For positioning text over background */
-  }
-  
-  .hero-title {
-    color: #fff;
-    font-size: 4rem;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Optional: Add shadow to make text more readable */
-    text-align: center;
-    transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover effects */
-  }
-  
-  .hero-section:hover .hero-title {
-    color: #ffcc00; /* Change text color on hover */
-    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.9); /* Enhanced shadow on hover */
-    transform: scale(1.1); /* Zoom effect on hover */
-  }
-  
-  /* Content Section */
-  .content {
-    padding: 40px 20px;
-    text-align: center;
-  }
-  
-  /* About Container */
+  width: 100%;
+  background-color: #6cecd0
+}
+
+/* Hero Section */
+.hero-section {
+  background-image: url('../../Assets/hero_bg.jpg'); /* Path to your background image */
+  background-size: cover;
+  background-position: center;
+  height: 70vh; /* Adjust the height as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* For positioning text over background */
+}
+
+.hero-title {
+  color: #fff;
+  font-size: 4rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Optional: Add shadow to make text more readable */
+  text-align: center;
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+.hero-section:hover .hero-title {
+  color: #ffcc00; /* Change text color on hover */
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.9); /* Enhanced shadow on hover */
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Content Section */
+.content {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* About Container */
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns of equal width */
+  gap: 20px; /* Space between grid items */
+  padding: 20px;
+  background-color: #191536
+}
+
+/* Card Styling */
+.card {
+  background-color: #ffffff; /* Card background color */
+  padding: 20px;
+  margin: 10px;
+  margin-left: 60px;
+  margin-right: 60px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center; /* Center text inside cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Card Headings */
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #009900; /* Accent color */
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/* Card Paragraphs */
+.card p {
+  font-size: 1rem;
+  color: #4f4f4f; /* Neutral dark grey for readability */
+  line-height: 1.5;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
   .about-container {
-    display: flex;
-    flex-wrap: wrap; /* Ensure cards wrap on smaller screens */
-    justify-content: space-around; /* Space out the cards */
-    padding: 20px;
+    grid-template-columns: 1fr; /* Single column layout on smaller screens */
   }
-  
-  /* Card Styling */
-  .card {
-    flex: 1;
-    margin: 10px;
-    background-color: #ffffff; /* Card background color */
-    padding: 20px;
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    max-width: 30%; /* Fixed card width */
-    text-align: center; /* Center text inside cards */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
-  }
-  
-  .card:hover {
-    transform: translateY(-10px); /* Lift effect on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-  }
-  
-  /* Card Headings */
-  .card h2 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    color: #009900; /* Accent color */
-    font-family: 'Ubuntu', sans-serif;
-  }
-  
-  /* Card Paragraphs */
-  .card p {
-    font-size: 1rem;
-    color: #4f4f4f; /* Neutral dark grey for readability */
-    line-height: 1.5;
-  }
-  
-  /* Media Queries for Responsive Design */
-  @media (max-width: 768px) {
-    .about-container {
-      flex-direction: column; /* Stack cards vertically */
-      align-items: center; /* Center align cards */
-    }
-  
-    .card {
-      max-width: 100%; /* Full width on smaller screens */
-      margin: 10px 0; /* Vertical margin */
-    }
-  }
-  
+}

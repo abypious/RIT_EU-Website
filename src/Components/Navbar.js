@@ -18,8 +18,6 @@ function Navbar() {
     };
 
     window.addEventListener('scroll', handleScroll);
-
-    // Cleanup on component unmount
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -33,10 +31,8 @@ function Navbar() {
       }
     };
 
-    handleResize(); // Call on component mount
+    handleResize();
     window.addEventListener('resize', handleResize);
-
-    // Cleanup on component unmount
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
@@ -45,35 +41,25 @@ function Navbar() {
   };
 
   return (
-    <div>
-      <nav className="navbar navbar-expand-lg fixed-top navbar-scroll">
-        <div className="container-fluid">
-          <NavLink className="navbar-brand" to="/">
-            <img src={Logo} alt="Logo" />
-          </NavLink>
-          {isMobile && (
-            <button className="mobile-menu-icon" onClick={toggleMobileMenu}>
-              <span className="hamburger-icon">&#9776;</span>
-            </button>
-          )}
-          <div className={`navbar-nav ${isMobile && isMenuOpen ? 'mobile-menu-active' : ''}`}>
-            <NavLink className="nav-link" exact activeClassName="active" to="/" onClick={toggleMobileMenu}>
-              Home
-            </NavLink>
-            <NavLink className="nav-link" activeClassName="active" to="/about" onClick={toggleMobileMenu}>
-              About
-            </NavLink>
-            <NavLink className="nav-link" activeClassName="active" to="/blogs" onClick={toggleMobileMenu}>
-              Blogs
-            </NavLink>
-            <NavLink className="nav-link" activeClassName="active" to="/contact" onClick={toggleMobileMenu}>
-              Contact
-            </NavLink>
-          </div>
-          {!isMobile && <button className="learn-more-btn">Learn More</button>}
+    <nav className="navbar navbar-expand-lg fixed-top navbar-scroll">
+      <div className="container-fluid">
+        <NavLink className="navbar-brand" to="/">
+          <img src={Logo} alt="Logo" />
+        </NavLink>
+        {isMobile && (
+          <button className="mobile-menu-icon" onClick={toggleMobileMenu}>
+            <span className="hamburger-icon">&#9776;</span>
+          </button>
+        )}
+        <div className={`navbar-nav ${isMobile && isMenuOpen ? 'mobile-menu-active' : ''}`}>
+          <a className="nav-link" href="#home" onClick={isMobile ? toggleMobileMenu : null}>Home</a>
+          <a className="nav-link" href="#about" onClick={isMobile ? toggleMobileMenu : null}>About</a>
+          <a className="nav-link" href="#blog" onClick={isMobile ? toggleMobileMenu : null}>Blog</a>
+          <a className="nav-link" href="#contact" onClick={isMobile ? toggleMobileMenu : null}>Contact</a>
         </div>
-      </nav>
-    </div>
+        {!isMobile && <button className="learn-more-btn">Learn More</button>}
+      </div>
+    </nav>
   );
 }
 

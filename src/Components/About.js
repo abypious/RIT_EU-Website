@@ -9,7 +9,7 @@ function About() {
         <p>
           RIT EU is dedicated to supporting post-matric students at RIT through Christian fellowship and spiritual growth. Our goal is to empower students to become impactful leaders who actively contribute to their community and faith.
         </p>
-      </div>
+      </div> 
       <div className='card'>
         <h2>How to Join</h2>
         <p>
@@ -21,7 +21,16 @@ function About() {
         <p>
           <strong>Email:</strong> contact@riteu.org <br />
           <strong>Phone:</strong> +91-123-456-7890 <br />
-          <strong>Address:</strong> RIT Campus, XYZ Road, City, State, 123456
+          <strong>Address:</strong> +91 73564 95708
+        </p>
+      </div>
+      <div className='card'>
+        <h2>Present leaders</h2>
+        <p>
+          <strong>Staff in charge:</strong> Vincent G <br />
+          <strong>Mob:</strong> +91 91886 80371<br />
+          <strong>Student coordinator:</strong> Aby Pious <br />
+          <strong>Mob:</strong> R+91 73564 95708
         </p>
       </div>
     </div>

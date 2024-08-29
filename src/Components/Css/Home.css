@@ -1,6 +1,7 @@
 /* Home Container */
 .home-container {
   width: 100%;
+  background-color: #efefef;
 }
 
 /* Hero Section */
@@ -42,7 +43,6 @@
 /* Content Section */
 .content {
   padding: 40px 20px;
-  background-color: #c8cacc; /* Optional: Adds a background color to the content section */
   text-align: center;
 }
 
@@ -59,16 +59,16 @@
 .about-section h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #04aa0c; /* Accent color */
+  color: #009900; /* Accent color */
   font-family: 'Ubuntu', sans-serif;
   display: inline-block;
   padding-bottom: 5px;
-  border-bottom: 2px solid #04aa0c; /* Underline effect */
+  border-bottom: 2px solid #009900; /* Underline effect */
   transition: border-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
 .about-section h2:hover {
-  border-color: #04aa0c; /* Darker shade on hover */
+  border-color: #009900; /* Darker shade on hover */
 }
 
 .about-section p {
@@ -93,7 +93,7 @@
 .mission, .vision {
   flex: 1;
   margin: 10px;
-  background-color: #04aa0c; /* Accent color */
+  background-color: #009900; /* Accent color */
   padding: 20px;
   border-radius: 10px;
   color: #fff; /* White text for contrast */
