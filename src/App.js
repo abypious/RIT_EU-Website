@@ -7,6 +7,7 @@ import Blog from './Components/Blog';
 import Contact from './Components/Contact';
 import AllBlog from './Components/AllBlogs';
 import ScrollUp from './Components/ScrollUp';
+import Footer from './Components/Footer';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function RouteSwitch() {
             <div id="about"><About /></div>
             <div id="blog"><Blog /></div>
             <div id="contact"><Contact /></div>
+            <div id="footer"><Footer /></div>
           </>
         } />
         <Route path="/AllBlog" element={<AllBlog />} />
