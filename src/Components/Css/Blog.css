@@ -49,22 +49,15 @@
 
 .blogs .container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns */
-  gap: 20px; /* Space between items */
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px; 
+  
 }
 
 @media (max-width: 768px) {
   .blogs .container {
-    grid-template-columns: 1fr; /* One column on smaller screens */
+    grid-template-columns: 1fr; 
   }
-}
-
-.button-container {
-  display: flex;
-  justify-content: center;
-  gap: 10px; /* Space between buttons */
-  margin-top: 20px;
-  grid-column: span 2; /* Ensure the button container spans both columns */
 }
 
 .show-more-button,
@@ -85,7 +78,7 @@
 }
 
 .text-center {
-  grid-column: span 2; /* Center the buttons under both columns */
+  grid-column: span 2; 
   text-align: center;
 }
 
