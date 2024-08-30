@@ -3,6 +3,8 @@ import './Css/Contact.css';
 
 function Contact() {
   return (
+    <>
+    <h1 className='about-heading'>--Contact--</h1>
     <section id="contact" className="contact">
       <div className="container">
         <div className="row" data-aos="fade-in">
@@ -37,6 +39,7 @@ function Contact() {
         </div>
       </div>
     </section>
+  </>
   );
 }
 

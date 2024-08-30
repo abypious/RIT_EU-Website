@@ -7,6 +7,13 @@
   background-color: #6cecd0
 }
 
+.about-heading {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 2.5rem;
+  color: #333;
+}
+
 .blog-item {
   background: #f9f9f9;
   padding: 20px;

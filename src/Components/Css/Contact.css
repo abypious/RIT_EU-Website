@@ -5,6 +5,13 @@
   background-color: #191536
 }
 
+.about-heading {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 2.5rem;
+  color: #333;
+}
+
 .contact .container {
   background: #f9f9f9;
   padding: 40px;

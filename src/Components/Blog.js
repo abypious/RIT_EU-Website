@@ -30,6 +30,8 @@ function Blog() {
   };
 
   return (
+    <>
+    <h1 className='about-heading'>--Blogs--</h1>
     <section id="blogs" className="blogs">
       <div className="container">
         {blogs.slice(0, visibleBlogs).map((blog, index) => (
@@ -54,6 +56,7 @@ function Blog() {
         </div>
       </div>
     </section>
+    </>
   );
 }
 
