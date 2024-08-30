@@ -88,6 +88,7 @@
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
   .about-container {
-    grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    grid-template-columns: 1fr;
+    width: 99%; /* Single column layout on smaller screens */
   }
 }

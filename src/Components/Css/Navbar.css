@@ -7,7 +7,7 @@ html {
   background-color: #0099008b;
   box-shadow: none;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  width: 100%;
+  width: 80%;
   height: 80px;
 }
 
