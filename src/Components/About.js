@@ -19,16 +19,16 @@ function About() {
       <div className='card'>
         <h2>Contact Details</h2>
         <p>
-          <strong>Email:</strong> contact@riteu.org <br />
-          <strong>Phone:</strong> +91-123-456-7890 <br />
-          <strong>Address:</strong> +91 73564 95708
+          <strong>Email:</strong> riteugroup@gmail.com <br />
+          <strong>Phone:</strong> +91 73564 95708 <br />
+          <strong>Address:</strong> RIT Kottayam
         </p>
       </div>
       <div className='card'>
         <h2>Present leaders</h2>
         <p>
           <strong>Staff in charge:</strong> Vincent G <br />
-          <strong>Mob:</strong> +91 91886 80371<br />
+          <strong>Mob:</strong> +91 94955 08617<br />
           <strong>Student coordinator:</strong> Aby Pious <br />
           <strong>Mob:</strong> R+91 73564 95708
         </p>

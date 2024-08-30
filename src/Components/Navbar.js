@@ -40,6 +40,10 @@ function Navbar() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleLearnMoreClick = () => {
+    window.location.href = 'http://uesikerala.org/'; // Replace with the URL you want to redirect to
+  };
+
   return (
     <nav className="navbar navbar-expand-lg fixed-top navbar-scroll">
       <div className="container-fluid">
@@ -57,7 +61,7 @@ function Navbar() {
           <a className="nav-link" href="#blog" onClick={isMobile ? toggleMobileMenu : null}>Blog</a>
           <a className="nav-link" href="#contact" onClick={isMobile ? toggleMobileMenu : null}>Contact</a>
         </div>
-        {!isMobile && <button className="learn-more-btn">Learn More</button>}
+        {!isMobile && <button className="learn-more-btn" onClick={handleLearnMoreClick}>Learn More</button>}
       </div>
     </nav>
   );
