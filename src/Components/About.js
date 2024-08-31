@@ -23,15 +23,18 @@ function About() {
           <p>
             <strong>Email:</strong> riteugroup@gmail.com <br />
             <strong>Phone:</strong> +91 73564 95708 <br />
-            <strong>Address:</strong> RIT Kottayam
+            <strong>Address:</strong> RIT Kottayam<br />
+            <strong> </strong> <br />
+            <strong><button className='cont-button'>Contact</button></strong><br />
           </p>
         </div>
         <div className='card'>
           <h2>Present Leaders</h2>
           <p>
-            <strong>Staff in charge:</strong> Vincent G <br />
+            <strong>Staff:</strong> Vincent G <br />
             <strong>Mob:</strong> +91 94955 08617<br />
-            <strong>Student coordinator:</strong> Aby Pious <br />
+            <strong> </strong> <br />
+            <strong>Student Lead:</strong> Aby Pious <br />
             <strong>Mob:</strong> +91 73564 95708
           </p>
         </div>

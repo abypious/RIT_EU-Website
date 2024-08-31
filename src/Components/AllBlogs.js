@@ -31,11 +31,10 @@ function AllBlogs() {
       ];
 
   return (
-    <section id="all-blogs" className="blogs">
-      <div>
-      <h1 className="title">--- All Blogs ---</h1>
-      </div>
-      <div className="container">
+    <>
+      <h1 className='title'>--All Blogs--</h1>
+      <section id="blogs" className="blogs">
+        <div className="container">
         {blogs.map((blog, index) => (
           <BlogItem
             key={index}
@@ -46,6 +45,7 @@ function AllBlogs() {
         ))}
       </div>
     </section>
+  </>
   );
 }
 

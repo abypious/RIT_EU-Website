@@ -1,16 +1,12 @@
 import React from 'react';
 import './Css/Home.css';
 import BackgroundImage from '../Assets/hero_bg.jpg'; // Ensure the path is correct
-import CoverImage from '../Assets/bg-gray.jpg'; // Ensure the path is correct
 
 function Home() {
   return (
     <div className="home-container">
       <div className="hero-section" style={{ backgroundImage: `url(${BackgroundImage})` }}>
         <h1 className="hero-title">RIT EU</h1>
-      </div>
-      <div className="cover-section" style={{ backgroundImage: `url(${CoverImage})` }}>
-        {/* Optional: Add additional content or overlays */}
       </div>
       <div className="content">
         <section className="about-section">

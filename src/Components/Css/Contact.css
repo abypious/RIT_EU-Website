@@ -2,7 +2,7 @@
   padding: 60px 0;
   display: flex;
   justify-content: center;
-  background-color: #191536
+  background-color: transparent;
 }
 
 .about-heading {
@@ -16,7 +16,7 @@
   background: #f9f9f9;
   padding: 40px;
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.12);
-  width: 80%;
+  width: 100%;
   max-width: 600px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -33,7 +33,7 @@
 
 .contact input,
 .contact textarea {
-  width: 100%;
+  width: 500px;
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ddd;
@@ -99,5 +99,13 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+/* Styles for desktop view */
+@media (min-width: 768px) {
+  .contact input,
+  .contact textarea {
+    width: calc(100% - 20px); /* Adjust the width as needed */
   }
 }
