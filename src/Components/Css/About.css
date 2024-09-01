@@ -1,19 +1,11 @@
 /* General Styling */
 .about-heading {
-  text-align: center;
-  font-size: 2.5rem;
+  font-size: 36px;
   color: #333;
-  margin: 50px 0;
-  position: relative;
-}
-
-.about-heading:after {
-  content: '';
-  width: 100px;
-  height: 3px;
-  background: #3498db;
-  display: block;
-  margin: 10px auto;
+  margin-bottom: 40px;
+  font-family: 'Poppins', sans-serif;
+  padding-bottom: 10px;
+  text-align: center; 
 }
 
 /* About Container */

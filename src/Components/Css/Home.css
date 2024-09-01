@@ -1,126 +1,151 @@
-/* General Container */
+/* Home.css */
+
 .home-container {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
 }
 
 /* Hero Section */
 .hero-section {
-  height: 80vh;
+  height: 70vh;
   background-size: cover;
   background-position: center;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   position: relative;
 }
 
-.hero-title {
-  color: white;
-  font-size: 4rem;
-  text-transform: uppercase;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
 }
 
-/* Cover Section */
-.cover-section {
-  height: 40vh;
-  background-size: cover;
-  background-position: center;
+.hero-title {
+  color: #fff;
+  font-size: 48px;
+  z-index: 2;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  position: relative;
+  text-align: center;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-title:hover {
+  color: #ffd700; 
+  transform: scale(1.1); 
 }
 
 /* Content Section */
 .content {
-  background-color: #f5f5f5;
-  padding: 50px 20px;
-}
-
-.about-section {
+  padding: 60px 20px;
   max-width: 1200px;
   margin: 0 auto;
-  text-align: center;
 }
 
 .about-section h2 {
-  font-size: 2.5rem;
+  font-size: 36px;
+  color: #5d54a4;
   margin-bottom: 20px;
-  color: #333;
-  text-transform: uppercase;
-  position: relative;
-}
-
-.about-section h2:after {
-  content: '';
-  width: 100px;
-  height: 3px;
-  background: #3498db;
-  display: block;
-  margin: 10px auto;
+  text-align: center;
 }
 
 .about-section p {
-  font-size: 1.2rem;
+  font-size: 18px;
+  font-weight: 500;
   line-height: 1.8;
-  color: #666;
+  color: #555;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-/* Mission and Vision */
 .mission-vision {
   display: flex;
   justify-content: space-between;
-  margin-top: 40px;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.mission, .vision {
-  background-color: white;
-  padding: 30px;
-  width: 48%;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+.mission,
+.vision {
+  flex: 1;
+  min-width: 280px;
+  background: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-.mission h3, .vision h3 {
-  font-size: 1.8rem;
-  color: #333;
+.mission:hover,
+.vision:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.mission h3,
+.vision h3 {
+  font-size: 24px;
+  color: #5d54a4;
   margin-bottom: 15px;
 }
 
-.mission p, .vision p {
-  font-size: 1.1rem;
-  line-height: 1.6;
+.mission p,
+.vision p {
+  font-size: 14px;
   color: #666;
+  line-height: 1.6;
 }
 
-/* Hover Effects for Mission and Vision */
-.mission:hover, .vision:hover {
-  background-color: #f0f8ff;
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-}
-
-.mission h3:hover, .vision h3:hover {
-  color: #3498db;
-}
-
-.mission p:hover, .vision p:hover {
-  color: #333;
-}
-
-/* Media Queries for Responsive Design */
+/* Responsive Design */
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 32px;
   }
 
-  .cover-section {
-    height: 20vh;
+  .about-section h2 {
+    font-size: 28px;
   }
 
   .mission-vision {
     flex-direction: column;
+    gap: 40px;
   }
 
-  .mission, .vision {
-    width: 100%;
-    margin-bottom: 20px;
+  .mission,
+  .vision {
+    min-width: 80%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 24px;
+  }
+
+  .about-section h2 {
+    font-size: 24px;
+  }
+
+  .about-section p {
+    font-size: 14px;
+  }
+
+  .mission h3,
+  .vision h3 {
+    font-size: 20px;
+  }
+
+  .mission p,
+  .vision p {
+    font-size: 13px;
   }
 }
