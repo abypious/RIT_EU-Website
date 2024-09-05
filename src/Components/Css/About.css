@@ -1,4 +1,4 @@
-/* General Styling */
+/* Abut Styling */
 .about-heading {
   font-size: 36px;
   color: #333;
@@ -8,7 +8,6 @@
   text-align: center; 
 }
 
-/* About Container */
 .about-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -18,7 +17,6 @@
   margin: 0 auto;
 }
 
-/* Card Styling */
 .card {
   background-color: white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -42,7 +40,6 @@
   transition: color 0.3s ease;
 }
 
-/* Hover Effects for Mission and Vision */
 .card:hover {
   background-color: #f0f8ff;
   transform: translateY(-5px);
@@ -84,7 +81,6 @@
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Button Hover Effects */
 .cont-button :hover {
   background-color: #2980b9;
   transform: scale(1.05);

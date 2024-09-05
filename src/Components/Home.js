@@ -1,6 +1,6 @@
 import React from 'react';
 import './Css/Home.css';
-import BackgroundImage from '../Assets/hero_bg.jpg'; // Ensure the path is correct
+import BackgroundImage from '../Assets/hero_bg.jpg';
 
 function Home() {
   return (

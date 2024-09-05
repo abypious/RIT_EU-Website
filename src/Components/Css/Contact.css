@@ -1,5 +1,4 @@
 /* Contact.css */
-
 .contact {
   padding: 60px 0;
   background: #f7f7f7;
@@ -96,7 +95,6 @@
   text-align: center;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .contact .container {
     padding: 20px;

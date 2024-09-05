@@ -41,7 +41,7 @@ function Navbar() {
   };
 
   const handleLearnMoreClick = () => {
-    window.location.href = 'http://uesikerala.org/'; // Replace with the URL you want to redirect to
+    window.location.href = 'https://uesi.in/'; 
   };
 
   return (

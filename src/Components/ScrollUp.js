@@ -1,6 +1,5 @@
-// ScrollUpButton.js
 import React, { useEffect, useState } from 'react';
-import '../Components/Css/ScrollUp.css'; // Import the CSS file
+import '../Components/Css/ScrollUp.css'; 
 
 const ScrollUp = () => {
   const [showButton, setShowButton] = useState(false);

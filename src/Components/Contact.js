@@ -18,7 +18,7 @@ function Contact() {
         e.target.reset();
       }, (error) => {
         setLoading(false);
-        console.error('EmailJS error:', error.text); // Log error for debugging
+        console.error('EmailJS error:', error.text); 
         toast.error('Oops! Something went wrong. Please try again.');
       });
   };

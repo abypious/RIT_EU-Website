@@ -5,7 +5,6 @@
   color: #333;
 }
 
-/* Hero Section */
 .hero-section {
   height: 70vh;
   background-size: cover;
@@ -42,7 +41,6 @@
   transform: scale(1.1); 
 }
 
-/* Content Section */
 .content {
   padding: 60px 20px;
   max-width: 1200px;
@@ -104,7 +102,6 @@
   line-height: 1.6;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .hero-title {
     font-size: 32px;

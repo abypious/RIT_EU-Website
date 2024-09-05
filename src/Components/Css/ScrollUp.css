@@ -1,7 +1,7 @@
 .scroll-up-btn {
     position: fixed;
-    bottom: 20px; /* Adjust if needed */
-    right: 20px;  /* Adjust if needed */
+    bottom: 20px; 
+    right: 20px; 
     background-color: #009900;
     color: #fff;
     border: none;
@@ -16,7 +16,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     opacity: 0;
     transition: opacity 0.3s ease;
-    z-index: 1000; /* Ensure it’s on top of other elements */
+    z-index: 1000; 
   }
   
   

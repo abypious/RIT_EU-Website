@@ -29,7 +29,7 @@ function Blog() {
 
   const showMoreBlogs = () => {
     if (visibleBlogs + 2 >= blogs.length) {
-      setVisibleBlogs(blogs.length); // Set to total number of blogs
+      setVisibleBlogs(blogs.length);
       setShowAll(true);
     } else {
       setVisibleBlogs(visibleBlogs + 2);
